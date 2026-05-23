@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Relations — Dylan Smith</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pg-hero { background: var(--ink); padding: 4rem 2.5rem 3rem; position: relative; overflow: hidden; }
+    .pg-ghost { position: absolute; bottom: -1.5rem; left: -0.5rem; font-family: var(--ff-display); font-style: italic; font-weight: 700; font-size: clamp(3.5rem, 10vw, 8rem); color: rgba(240,235,225,0.04); line-height: 1; pointer-events: none; white-space: nowrap; }
+    .pg-num { font-family: var(--ff-body); font-style: italic; font-size: 0.85rem; color: rgba(240,235,225,0.3); position: relative; z-index: 1; }
+    .pg-title { font-family: var(--ff-display); font-style: italic; font-weight: 300; font-size: clamp(2.5rem, 7vw, 5.5rem); color: var(--cream); line-height: 0.9; letter-spacing: -0.025em; position: relative; z-index: 1; margin: 0.75rem 0 1.25rem; }
+    .pg-desc { font-family: var(--ff-body); font-style: italic; font-size: 1.1rem; color: rgba(240,235,225,0.5); max-width: 420px; line-height: 1.6; position: relative; z-index: 1; }
+    .content { background: var(--offwhite); padding: 3rem 2.5rem; }
+    .section-label { font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--crimson); margin-bottom: 2rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--crimson); opacity: 0.2; }
+    .pr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .pr-card { background: var(--offwhite); padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 0.75rem; min-height: 180px; position: relative; transition: background 0.2s; cursor: pointer; }
+    .pr-card:hover { background: var(--cream); }
+    .pr-num { font-family: var(--ff-body); font-style: italic; font-size: 0.85rem; color: rgba(26,16,8,0.2); }
+    .pr-title { font-family: var(--ff-display); font-style: italic; font-weight: 300; font-size: 1.35rem; color: var(--ink); line-height: 1.1; }
+    .pr-type { font-size: 7px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--crimson); }
+    .pr-desc { font-family: var(--ff-body); font-size: 0.95rem; line-height: 1.7; color: var(--warm-gray); font-weight: 300; }
+    .pr-arrow { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 14px; color: rgba(26,16,8,0.15); transition: color 0.2s; }
+    .pr-card:hover .pr-arrow { color: var(--crimson); }
+    @media (max-width: 640px) { .pr-grid { grid-template-columns: 1fr; } .content { padding: 2.5rem 1.25rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">Dylan Smith</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="campaigns.html">Campaigns</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page">
+    <a class="back-link" href="../index.html">← Back to home</a>
+    <div class="pg-hero">
+      <div class="linen"></div>
+      <div class="pg-ghost">Public Relations</div>
+      <div class="pg-num">06</div>
+      <div class="pg-title">Public<br>Relations</div>
+      <div class="pg-desc">Press, media outreach, and brand reputation — the full spectrum of PR practice.</div>
+    </div>
+    <div class="bar-red"></div>
+    <section class="content">
+      <div class="section-label">PR Work</div>
+      <div class="pr-grid">
+        <a class="pr-card" href="#"><div class="pr-arrow">↗</div><div class="pr-num">01</div><div class="pr-type">Press Release</div><div class="pr-title">PR Project Title</div><div class="pr-desc">Brief description of the PR work, publication, and outcome.</div></a>
+        <a class="pr-card" href="#"><div class="pr-arrow">↗</div><div class="pr-num">02</div><div class="pr-type">Media Outreach</div><div class="pr-title">PR Project Title</div><div class="pr-desc">Brief description of the PR work, publication, and outcome.</div></a>
+        <a class="pr-card" href="#"><div class="pr-arrow">↗</div><div class="pr-num">03</div><div class="pr-type">Brand Strategy</div><div class="pr-title">PR Project Title</div><div class="pr-desc">Brief description of the PR work, publication, and outcome.</div></a>
+        <a class="pr-card" href="#"><div class="pr-arrow">↗</div><div class="pr-num">04</div><div class="pr-type">Crisis Comms</div><div class="pr-title">PR Project Title</div><div class="pr-desc">Brief description of the PR work, publication, and outcome.</div></a>
+      </div>
+    </section>
+    <footer><div class="foot-copy">Dylan Smith · Portfolio 2026</div><div class="foot-mark">DS</div></footer>
+  </div>
+</body>
+</html>

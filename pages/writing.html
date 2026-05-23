@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Dylan Smith</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pg-hero {
+      background: var(--ink);
+      padding: 4rem 2.5rem 3rem;
+      position: relative; overflow: hidden;
+    }
+    .pg-ghost {
+      position: absolute; bottom: -1.5rem; left: -0.5rem;
+      font-family: var(--ff-display);
+      font-style: italic; font-weight: 700;
+      font-size: clamp(5rem, 14vw, 11rem);
+      color: rgba(240,235,225,0.04);
+      line-height: 1; pointer-events: none; white-space: nowrap;
+    }
+    .pg-num {
+      font-family: var(--ff-body); font-style: italic;
+      font-size: 0.85rem; color: rgba(240,235,225,0.3);
+      position: relative; z-index: 1;
+    }
+    .pg-title {
+      font-family: var(--ff-display);
+      font-style: italic; font-weight: 300;
+      font-size: clamp(3rem, 8vw, 6rem);
+      color: var(--cream); line-height: 0.9; letter-spacing: -0.025em;
+      position: relative; z-index: 1; margin: 0.75rem 0 1.25rem;
+    }
+    .pg-desc {
+      font-family: var(--ff-body); font-style: italic;
+      font-size: 1.1rem; color: rgba(240,235,225,0.5);
+      max-width: 420px; line-height: 1.6;
+      position: relative; z-index: 1;
+    }
+    /* Sample grid */
+    .samples {
+      background: var(--offwhite);
+      padding: 3rem 2.5rem;
+    }
+    .samples-label {
+      font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--crimson); margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .samples-label::after { content: ''; flex: 1; height: 1px; background: var(--crimson); opacity: 0.2; }
+    .sample-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .sample-item {
+      background: var(--offwhite);
+      padding: 1.75rem 2rem;
+      display: grid; grid-template-columns: 60px 1fr auto;
+      gap: 1.5rem; align-items: center;
+      transition: background 0.2s; cursor: pointer;
+    }
+    .sample-item:hover { background: var(--cream); }
+    .si-num {
+      font-family: var(--ff-body); font-style: italic;
+      font-size: 1.4rem; color: rgba(26,16,8,0.18); line-height: 1;
+    }
+    .si-title {
+      font-family: var(--ff-body); font-style: italic;
+      font-size: 1.2rem; color: var(--ink); line-height: 1.2;
+    }
+    .si-meta {
+      font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--warm-gray); margin-top: 4px;
+    }
+    .si-arrow { font-size: 16px; color: var(--crimson); opacity: 0.4; transition: opacity 0.2s; }
+    .sample-item:hover .si-arrow { opacity: 1; }
+
+    /* Placeholder card */
+    .add-card {
+      background: var(--offwhite);
+      border: 1px dashed rgba(26,16,8,0.15);
+      padding: 2rem; margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px;
+      font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(26,16,8,0.25); cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .add-card:hover { border-color: var(--crimson); color: var(--crimson); }
+
+    @media (max-width: 640px) {
+      .pg-hero { padding: 3rem 1.25rem 2.5rem; }
+      .samples { padding: 2.5rem 1.25rem; }
+      .sample-item { grid-template-columns: 40px 1fr; }
+      .si-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">Dylan Smith</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="writing.html" class="active">Writing</a></li>
+      <li><a href="campaigns.html">Campaigns</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+    <a class="back-link" href="../index.html">← Back to home</a>
+
+    <div class="pg-hero">
+      <div class="linen"></div>
+      <div class="pg-ghost">Writing</div>
+      <div class="pg-num">02</div>
+      <div class="pg-title">Writing</div>
+      <div class="pg-desc">Articles, copy, essays, and editorial work — stories that inform, persuade, and resonate.</div>
+    </div>
+
+    <div class="bar-red"></div>
+
+    <section class="samples">
+      <div class="samples-label">Writing Samples</div>
+      <div class="sample-list">
+        <!-- Add your real writing pieces here. Replace "#" with actual links. -->
+        <a class="sample-item" href="#">
+          <div class="si-num">01</div>
+          <div>
+            <div class="si-title">Article Title Goes Here</div>
+            <div class="si-meta">Publication Name · Year</div>
+          </div>
+          <div class="si-arrow">↗</div>
+        </a>
+        <a class="sample-item" href="#">
+          <div class="si-num">02</div>
+          <div>
+            <div class="si-title">Another Writing Sample</div>
+            <div class="si-meta">Publication Name · Year</div>
+          </div>
+          <div class="si-arrow">↗</div>
+        </a>
+        <a class="sample-item" href="#">
+          <div class="si-num">03</div>
+          <div>
+            <div class="si-title">Press Release or Blog Post</div>
+            <div class="si-meta">Client / Brand · Year</div>
+          </div>
+          <div class="si-arrow">↗</div>
+        </a>
+        <a class="sample-item" href="#">
+          <div class="si-num">04</div>
+          <div>
+            <div class="si-title">Op-Ed or Feature Story</div>
+            <div class="si-meta">Publication · Year</div>
+          </div>
+          <div class="si-arrow">↗</div>
+        </a>
+      </div>
+      <div class="add-card">+ Add more writing samples</div>
+    </section>
+
+    <footer>
+      <div class="foot-copy">Dylan Smith · Portfolio 2026</div>
+      <div class="foot-mark">DS</div>
+    </footer>
+  </div>
+</body>
+</html>

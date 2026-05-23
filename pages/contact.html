@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Dylan Smith</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-hero {
+      background: var(--crimson);
+      padding: 5rem 2.5rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .ch-ghost {
+      position: absolute; bottom: -2rem; right: -1rem;
+      font-family: var(--ff-display); font-style: italic; font-weight: 700;
+      font-size: clamp(6rem, 18vw, 14rem);
+      color: rgba(240,235,225,0.06); line-height: 1;
+      pointer-events: none; white-space: nowrap; letter-spacing: -0.04em;
+    }
+    .ch-content { position: relative; z-index: 1; }
+    .ch-label { font-size: 8px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(240,235,225,0.45); margin-bottom: 1.5rem; }
+    .ch-title {
+      font-family: var(--ff-display); font-style: italic; font-weight: 300;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      color: var(--cream); line-height: 0.88; letter-spacing: -0.025em;
+    }
+    .ch-sub { font-family: var(--ff-body); font-style: italic; font-size: 1.1rem; color: rgba(240,235,225,0.55); margin-top: 1.5rem; line-height: 1.6; max-width: 380px; }
+
+    .contact-body {
+      background: var(--offwhite);
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .contact-info {
+      padding: 3.5rem 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .ci-label { font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--crimson); margin-bottom: 2rem; }
+    .ci-row { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+    .ci-row:last-child { border-bottom: none; }
+    .ci-key { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,16,8,0.35); margin-bottom: 4px; }
+    .ci-val { font-family: var(--ff-body); font-size: 1.15rem; color: var(--ink); }
+    .ci-val a { transition: color 0.2s; }
+    .ci-val a:hover { color: var(--crimson); }
+
+    .contact-avail {
+      padding: 3.5rem 2.5rem;
+      background: var(--cream);
+    }
+    .ca-label { font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--crimson); margin-bottom: 2rem; }
+    .ca-heading { font-family: var(--ff-display); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+    .ca-text { font-family: var(--ff-body); font-size: 1.05rem; line-height: 1.75; color: var(--warm-gray); font-weight: 300; }
+    .ca-text em { font-style: italic; color: var(--crimson); }
+    .ca-status {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 1.75rem;
+      font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink);
+    }
+    .ca-dot { width: 7px; height: 7px; border-radius: 50%; background: #4CAF50; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+
+    @media (max-width: 640px) {
+      .contact-body { grid-template-columns: 1fr; }
+      .contact-info { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.25rem; }
+      .contact-avail { padding: 2.5rem 1.25rem; }
+      .contact-hero { padding: 4rem 1.25rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">Dylan Smith</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="campaigns.html">Campaigns</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page">
+    <a class="back-link" href="../index.html">← Back to home</a>
+
+    <div class="contact-hero">
+      <div class="linen"></div>
+      <div class="ch-ghost">Connect.</div>
+      <div class="ch-content">
+        <div class="ch-label">Get in touch</div>
+        <div class="ch-title">Let's<br>Connect.</div>
+        <div class="ch-sub">Open to opportunities in communications, PR, digital media &amp; brand storytelling.</div>
+      </div>
+    </div>
+
+    <div class="bar-red"></div>
+
+    <div class="contact-body">
+      <div class="contact-info">
+        <div class="ci-label">Contact Details</div>
+        <div class="ci-row">
+          <div class="ci-key">Phone</div>
+          <div class="ci-val"><a href="tel:4074790765">(407) 479-0765</a></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-key">Email</div>
+          <div class="ci-val"><a href="mailto:dylansmith@gmail.com">dylansmith@gmail.com</a></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-key">LinkedIn</div>
+          <div class="ci-val"><a href="https://linkedin.com/in/dylansmith" target="_blank">linkedin.com/in/dylansmith</a></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-key">Location</div>
+          <div class="ci-val">Orlando, FL</div>
+        </div>
+      </div>
+      <div class="contact-avail">
+        <div class="ca-label">Availability</div>
+        <div class="ca-heading">Open to new<br>opportunities.</div>
+        <div class="ca-text">
+          I'm currently available for <em>full-time roles</em>, <em>freelance projects</em>, and <em>consulting work</em> in communications, public relations, and digital media.<br><br>
+          Bilingual (English/Spanish) with experience across diverse industries and global perspectives.
+        </div>
+        <div class="ca-status"><div class="ca-dot"></div> Available for work</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot-copy">Dylan Smith · Portfolio 2026</div>
+      <div class="foot-mark">DS</div>
+    </footer>
+  </div>
+</body>
+</html>
